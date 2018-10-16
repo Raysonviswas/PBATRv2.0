@@ -14,14 +14,9 @@
  * limitations under the License.
  */
 
-package utils
+package pages
 
-import controllers.routes
-import models.{CheckMode, UserAnswers}
-import pages._
-import viewmodels.{AnswerRow, RepeaterAnswerRow, RepeaterAnswerSection}
+case object MyIntPagePage extends QuestionPage[Int] {
 
-class CheckYourAnswersHelper(userAnswers: UserAnswers) {
-
-
+  override def toString: String = "myIntPage"
 }

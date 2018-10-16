@@ -14,14 +14,21 @@
  * limitations under the License.
  */
 
-package utils
+package forms
 
-import controllers.routes
-import models.{CheckMode, UserAnswers}
-import pages._
-import viewmodels.{AnswerRow, RepeaterAnswerRow, RepeaterAnswerSection}
+import javax.inject.Inject
 
-class CheckYourAnswersHelper(userAnswers: UserAnswers) {
+import forms.mappings.Mappings
+import play.api.data.Form
 
+class MyIntPageFormProvider @Inject() extends Mappings {
 
+  def apply(): Form[Int] =
+    Form(
+      "value" -> int(
+        "myIntPage.error.required",
+        "myIntPage.error.wholeNumber",
+        "myIntPage.error.nonNumeric")
+          .verifying(inRange(0, 240, "myIntPage.error.outOfRange"))
+    )
 }

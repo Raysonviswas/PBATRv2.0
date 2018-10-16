@@ -21,8 +21,8 @@ error.number = Please enter a valid number
 error.required = Please enter a value
 error.summary.title = There is a problem
 
-index.title = professional-bodies-frontend
-index.heading = professional-bodies-frontend
+index.title = Professional Bodies
+index.heading = Approved Professional Bodies
 index.guidance = Welcome to your new frontend. Please see the README file for a guide to getting started.
 
 session_expired.title = For your security, this service has been reset
@@ -42,3 +42,6 @@ site.textarea.char_limit = (Limit is {0} characters)
 
 unauthorised.title = You can’t access this service with this account
 unauthorised.heading = You can’t access this service with this account
+
+myNewPage.title = Approved professional organisations and learned societies
+myNewPage.heading = Approved professional organisations and learned societies

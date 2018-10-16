@@ -1,0 +1,88 @@
+@*
+ * Copyright 2018 HM Revenue & Customs
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *@
+
+@import config.FrontendAppConfig
+
+@(appConfig: FrontendAppConfig)(implicit request: Request[_], messages: Messages)
+
+@main_template(
+    title = messages("myNewPage.title"),
+    appConfig = appConfig,
+    bodyClasses = None) {
+
+    @components.back_link()
+
+    @components.heading("myNewPage.heading")
+
+    <div class="form-group">
+        <input class="form-control" id="full-name-f1" id="myInput" type="text" name="search-oraganisations-f1" placeholder="Search..">
+    </div>
+
+    <h2 id="a">A</h2>
+
+    <li class= "organisation">AABC Register Ltd (Architects accredited in building conservation),from year 2016 to 2017</li>
+
+    <li class= "organisation">Academic and Research Surgery Society of</li>
+
+    <li class= "organisation">Academic Gaming and Simulation in Education and Training Society for</li>
+
+    <li class= "organisation">Academic Primary Care Society for</li>
+
+    <li class= "organisation">Access Consultants National Register of</li>
+
+    <li class= "organisation">Accident and Emergency Medicine British Association for</li>
+
+    <li class= "organisation">Accountancy Association of Lecturers in</li>
+
+    <li class= "organisation">Accountants and Auditors British Association of</li>
+
+    <li class= "organisation">Accountants Association of International</li>
+
+    <li class= "organisation">Accountants Natal Society of</li>
+
+    <li class= "organisation">Accountants South African Institute of Professional (SAIPA)</li>
+
+    <li class= "organisation">Accountants Transvaal Society of</li>
+
+    <li class= "organisation">Accounting Association American</li>
+
+    <li class= "organisation">Accounting Association British (Standing Committee for British Accounting Association)</li>
+
+    <li class= "organisation">Accounting Association European</li>
+
+    <li class= "organisation">Accounting Conference of Professors of</li>
+
+    <li class= "organisation">Accounting Technicians Association of</li>
+
+    <li class= "organisation">Accounting Technicians in Ireland Institute of</li>
+
+    <li class= "organisation">Acoustical Society British</li>
+
+    <li class= "organisation">Acoustical Society of America</li>
+
+    <li class= "organisation">Acoustics Institute of</li>
+
+    <li class= "organisation">Acquisition of Latin American Library Materials Seminar on the (SALALM)</li>
+
+    <li class= "organisation">Actuarial Profession The (name for the Institute and Faculty of Actuaries)</li>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"> </script>
+
+
+}
+
