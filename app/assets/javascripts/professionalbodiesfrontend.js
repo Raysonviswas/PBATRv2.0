@@ -119,6 +119,16 @@ $(document).ready(function() {
       }
   });
 
+ /* var filter = function(){
+      $("#myInput").on("keyup", function() {
+          var value = $(this).val().toLowerCase();
+              $(".organisation, h2").filter(function() {
+              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+             });
+          });
+      };
+
+  $(document).ready(filter)*/
 
   function numberInputs() {
       // =====================================================
@@ -150,16 +160,26 @@ $(document).ready(function() {
           if ( e.which == 38 || e.which == 40 || e.which == 188 )
               e.preventDefault();
       });
-      // =====================================================
-      // Filtering
-      // from class my input to class organisation
-      // =====================================================
-      $(document).ready(function(){
-            $("#myInput").on("keyup", function() {
-              var value = $(this).val().toLowerCase();
-              $(".organisation, h2").filter(function() {
-                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-              });
-            });
-          });
+
+
   }
+
+
+        // =====================================================
+        // Filtering
+        // from class my input to class organisation
+        // =====================================================
+  var input = document.getElementById("myInput");
+  var inputVal = document.getElementById("myInput").value;
+  var filtrate = document.getElementById("organisation");
+  var filtrateVal = document.getElementById("organisation").value;
+  var filterBool = filtrateVal == inputVal;
+
+  function filter (input) {
+        if (filterBool) {
+                filtrate.style.display = "block";
+            } else {
+                filtrate.style.display = "none";
+            }
+    }
+

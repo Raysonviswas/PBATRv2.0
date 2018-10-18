@@ -27,8 +27,25 @@
 
     @components.heading("myNewPage.heading")
 
+    <!--<script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>-->
+    <script src=@routes.Assets.versioned("javascripts/custom.js")></script>
+
+    <!--<script>
+    $(document).ready(function(){
+      $("#myInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $(".organisation, h2").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+    </script>-->
+
     <div class="form-group">
-        <input class="form-control" id="full-name-f1" id="myInput" type="text" name="search-oraganisations-f1" placeholder="Search..">
+        <input class="form-control" id="myInput" type="text" name="search-oraganisations-f1" placeholder="Search.." onkeyup="filter()">
     </div>
 
     <h2 id="a">A</h2>
@@ -78,10 +95,6 @@
     <li class= "organisation">Acquisition of Latin American Library Materials Seminar on the (SALALM)</li>
 
     <li class= "organisation">Actuarial Profession The (name for the Institute and Faculty of Actuaries)</li>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.js"
-            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-            crossorigin="anonymous"> </script>
 
 
 }
