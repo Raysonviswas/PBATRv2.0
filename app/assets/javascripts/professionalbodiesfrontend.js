@@ -165,6 +165,7 @@ $(document).ready(function() {
   }
 
 
+/*
         // =====================================================
         // Filtering
         // from class my input to class organisation
@@ -182,4 +183,5 @@ $(document).ready(function() {
                 filtrate.style.display = "none";
             }
     }
+*/
 
